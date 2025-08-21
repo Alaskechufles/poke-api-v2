@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router"
+import Home from "./pages/Home"
+import Card from "./components/Card"
 
 function App() {
 
 
   return (
     <>
-      <h1>hola poke-api</h1>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/:id" element={<Card />}></Route>
+      </Routes>
     </>
   )
 }
